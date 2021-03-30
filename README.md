@@ -27,3 +27,9 @@
 - [위치와 관련된 프로퍼티-Display,Position,Z-index](./html&css/12.md)
 - [위치와 관련된 프로퍼티-Flexbox](./html&css/13.md)
 - [상속과 우선순위](./html&css/14.md)
+
+## python 기초
+- [변수와 상수, 입력과 출력](./python/01.md)
+- [자료형과 내장함수](./python/02.md)
+- [제어문](./python/03.md)
+- [함수](./python/04.md)
