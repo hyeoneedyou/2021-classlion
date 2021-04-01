@@ -1,71 +1,114 @@
-## HTML(Hyper Text Markup Language)
+## Bootstrap
 
-- 이해가 쉬움, 정현화된 문법, 쓰이는 문법만 맨날 쓰임
-- Hyper Text = Link, Markup Language = 컴퓨터가 알아들을 수 있는 언어
-- HTML 코드
-    1. 글
-    2. 태그(글을 감싸는 틀)
-    3. 속성(틀에 붙는 부가설명)
-대원칙! HTML로 꾸미려 들지 말자. HTML은 꾸미는 언어가 아니다. 꾸미는 언어는 CSS.
+- CSS/javascript 기반의 웹 프레임워크
+- 오픈소스! 가져다 쓰기만 하면 됨
+- 반응형 웹 지원 ( 모바일에서도 화면 자동 조정)
+- 브라우저 호환성
+- 하지만 성능이 다소 떨어짐
 
-확장-live server 설치
+-웹 프레임워크 = 웹을 만드는 재료들의 모임
 
-## HTML 코드
+## Bootstrap 사용법
 
-- “이거 HTML 문서야~”를 알려주는태그
-    ```
-    <!DOCTYPE html><html>~</html>
-    ```
+- 부트스트랩 검색 후 이동>시작하기>CDN을 head태그에 붙여넣기
+- https://code.jquery.com 에 접속> 최신 버전의 uncompressed링크 클릭> 코드 복사> head 태그 맨 위에 붙여넣기
 
-- 직접 화면에 등장하진 않지만 이문서를 설명하는 태그
-  ```
-  <head>~</head>
-  ```
+또는
 
-- 직접적으로 화면에 등장하는, 문서에보이는 태그
+- CSS CDN을 head 태그에 붙여넣기
+- js CDN을 body 종료태그 바로 위에 붙여넣기
 
-  ```
-  <body>~</body>
-  ```
+## container 사용해보기
 
-⇒ 단축키: ! + tab
-
-## form 태그
-
--사용자로부터 정보를 입력받고 그 값을 프로그램으로 넘겨준다.
+-css>개요>콘테이너
 
 ```html
-<form action="전송받을 대상">
-	아이디 : <input type="text" name="myid"> # name으로 이 값을 인식해라!
-	비밀번호 : <input type="password" name="mypw"> # type이 password면 텍스트 숨겨짐
-	<input type="submit">
+<div class="container">
+  ...
+</div>
+```
 
+## 버튼 바꿔보기
+
+-css>버튼
+
+```html
+<input type="submit" class="btn btn-primary">
+```
+
+## 폼 기본예제 사용해보기
+
+-css>폼>기본예제
+
+```html
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">이메일 주소</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일을 입력하세요">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">암호</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">파일 업로드</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">여기에 블록레벨 도움말 예제</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> 입력을 기억합니다
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">제출</button>
 </form>
 ```
 
-## select  태그
+## 네비게이션 사용하기
+
+-컴포넌트>네비게이션>탭형
 
 ```html
-<select>
-	<option value="goodday">좋은날</option> # value로 이 값을 인식해라!
-	<option value="sadday">슬픈날</option>
-	<option value="soso">그저그런날</option>
-</select>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
 ```
 
-## ol, li, a 태그
+## 그래프 사용해보기
 
-⇒단축키:ul>li*5 + tab (*뒤의 개수만큼 리스트가 만들어짐)
+-컴포넌트>진행바>맥락적인 의미
 
 ```html
-<ol>
-	<li><a href="1.html">유년기</a></li>
-  <li><a href="2.html">질풍노도의 시기</a></li>
-  <li><a href="3.html">방황기</a></li>
-  <li><a href="4.html">지금</a></li>
-</ol>
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+    <span class="sr-only">60% Complete (warning)</span>
+  </div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+    <span class="sr-only">80% Complete (danger)</span>
+  </div>
+</div>
 ```
 
-우클릭-페이지소스보기: html코드 확인 가능
+## 부트스트랩 CSS 변경할 때
+- 부트스트랩의 스타일 적용 방식은 .class
+- 따라서 부트스트랩보다 상위 우선 순위인 !important, #id, div.class를 이용해야 CSS를 변경할 수 있다.
 
-F12길게 : 개발자도구
+## 그리드 시스템(.contatiner)
+- 전체를 12개의 col로 나눈다.
+- col-4, col-3, col-5면 12개를 4, 3, 5로 나눠갖는 것.
+- .col-lg-4 : lg: 기준의 되는 화면의 사이즈, 4: 12등분 중 차지할 비율
+![](https://images.velog.io/images/hyeoneedyou/post/674aa07a-08f9-4edc-888f-576752e42fdf/image.png)
